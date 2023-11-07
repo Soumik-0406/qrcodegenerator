@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital@1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poltawski Nowy', serif;
+}
+
+body{
+    display: flex;
+    /* padding: 0 10px; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(bg.jpg);
+}
+
+.wrapper{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    height: 260px;
+    /* background: #fff; */
+    max-width: 410px; 
+    border-radius: 7px;
+    padding: 16px 25px 0;
+    transition: height 0.2s ease;
+}
+
+.wrapper.active{
+    height: 480px;
+}
+
+header h1{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+header p{
+    margin-top: 5px;
+    color: #474747;
+    font-size: 16px;
+}
+
+.wrapper .form{
+    margin: 15px 0 18px;
+}
+
+.form :where(input,button){
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form input{
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid #999;
+}
+
+.form button{
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    background: #0374c0;
+}
+
+
+
+.wrapper .qr-code{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 33px 0;
+    border-radius: 5px;
+    /* height: 50%; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;   
+    transition: opacity 0.5s 0.05s ease;
+}
